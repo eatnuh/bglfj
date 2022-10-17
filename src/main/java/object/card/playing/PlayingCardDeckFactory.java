@@ -1,6 +1,6 @@
-package io.github.eatnuh.object.card.playing;
+package object.card.playing;
 
-import io.github.eatnuh.object.card.Deck;
+import object.card.Deck;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

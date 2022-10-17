@@ -1,4 +1,4 @@
-package io.github.eatnuh.object.dice;
+package object.dice;
 
 import java.util.Random;
 

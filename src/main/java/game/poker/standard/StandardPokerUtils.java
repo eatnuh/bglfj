@@ -1,13 +1,13 @@
-package io.github.eatnuh.game.poker.standard;
+package game.poker.standard;
 
-import io.github.eatnuh.object.card.playing.PlayingCard;
+import object.card.playing.PlayingCard;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static io.github.eatnuh.object.card.playing.PlayingCard.Rank.*;
+import static object.card.playing.PlayingCard.Rank.*;
 
 /**
  * This class provides utility methods used in standard rule poker games.
