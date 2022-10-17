@@ -72,7 +72,7 @@ public class StandardPokerUtils {
 
     /**
      * Tests if PlayingCards have the same rank as the sameRankCnt in the param
-     * ex) sameRankCnt = 4 -> There are 4 PlayingCards with the same rank.
+     * For example, if sameRankCnt is 4, it means that there are 4 playing cards with the same rank.
      *
      * @param playingCards playing cards
      * @param sameRankCnt  number of same rank

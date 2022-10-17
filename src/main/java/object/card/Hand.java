@@ -33,6 +33,7 @@ public class Hand<C extends Card> {
     /**
      * Select card in Hand without removing.
      *
+     * @param select selected card
      * @return card
      * @throws AssertionError when can't find it
      */
@@ -50,6 +51,7 @@ public class Hand<C extends Card> {
     /**
      * Remove card in Hand
      *
+     * @param select selected card
      * @return card
      */
     public C draw(C select) {
