@@ -1,4 +1,4 @@
-package object.card;
+package io.github.eatnuh.object.card;
 
 /**
  * The implementation of CardFace indicates

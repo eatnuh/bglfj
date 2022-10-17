@@ -1,4 +1,4 @@
-package object.card;
+package io.github.eatnuh.object.card;
 
 import java.util.ArrayList;
 import java.util.Collection;

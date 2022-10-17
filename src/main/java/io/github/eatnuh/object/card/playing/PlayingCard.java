@@ -1,7 +1,7 @@
-package object.card.playing;
+package io.github.eatnuh.object.card.playing;
 
-import object.card.Card;
-import object.card.CardFace;
+import io.github.eatnuh.object.card.Card;
+import io.github.eatnuh.object.card.CardFace;
 
 /**
  * A playingCard inherit Card.

@@ -1,6 +1,6 @@
-package game.poker.standard;
+package io.github.eatnuh.game.poker.standard;
 
-import object.card.playing.PlayingCard;
+import io.github.eatnuh.object.card.playing.PlayingCard;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static object.card.playing.PlayingCard.Rank.*;
+import static io.github.eatnuh.object.card.playing.PlayingCard.Rank.*;
 
 /**
  * This class takes place when both hands have the same hand ranking in the standard poker rules.

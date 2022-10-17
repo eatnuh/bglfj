@@ -1,4 +1,4 @@
-package object.card;
+package io.github.eatnuh.object.card;
 
 /**
  * A Card has a front face and a back face.

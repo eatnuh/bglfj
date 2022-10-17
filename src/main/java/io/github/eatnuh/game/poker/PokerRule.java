@@ -1,17 +1,17 @@
-package game.poker;
+package io.github.eatnuh.game.poker;
 
-import game.poker.standard.StandardPokerHandRanking;
-import object.card.Deck;
-import object.card.playing.PlayingCard;
-import object.card.playing.PlayingCardDeckFactory;
+import io.github.eatnuh.game.poker.standard.StandardPokerHandRanking;
+import io.github.eatnuh.object.card.Deck;
+import io.github.eatnuh.object.card.playing.PlayingCard;
+import io.github.eatnuh.object.card.playing.PlayingCardDeckFactory;
 
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.function.Supplier;
 
-import static game.poker.standard.StandardPokerHandRanking.compareHandRanking;
-import static game.poker.standard.StandardPokerHandRanking.getHandRanking;
-import static game.poker.standard.StandardPokerRankTier.compareRank;
+import static io.github.eatnuh.game.poker.standard.StandardPokerHandRanking.compareHandRanking;
+import static io.github.eatnuh.game.poker.standard.StandardPokerHandRanking.getHandRanking;
+import static io.github.eatnuh.game.poker.standard.StandardPokerRankTier.compareRank;
 
 /**
  * A poker rule has instances of various poker rules.
