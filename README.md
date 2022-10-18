@@ -15,3 +15,10 @@ To add a dependency using maven :
     <version>1.1</version>
 </dependency>
 ```
+
+To add a dependency using gradle : 
+```groovy
+dependencies {
+    implementation 'io.github.eatnuh:bglfj:1.1' 
+}
+```
