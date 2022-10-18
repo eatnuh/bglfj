@@ -1,7 +1,7 @@
 package component.card.playing;
 
+import component.Component;
 import component.card.Card;
-import component.card.CardFace;
 
 /**
  * A playingCard inherit Card.
@@ -11,11 +11,11 @@ import component.card.CardFace;
  */
 public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back> {
 
-    private PlayingCard(Front front, Back back, CardFace init) {
+    private PlayingCard(Front front, Back back, Component init) {
         super(front, back, init);
     }
 
-    public enum Front implements CardFace {
+    public enum Front implements Component {
 
         SPADE_A(Suit.SPADE, Rank.ACE),
         SPADE_2(Suit.SPADE, Rank.TWO),
@@ -92,16 +92,17 @@ public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back>
         }
 
         @Override
-        public String getCardFace() {
+        public String getName() {
             return this.name();
         }
+
     }
 
-    public enum Back implements CardFace {
+    public enum Back implements Component {
         HIDDEN;
 
         @Override
-        public String getCardFace() {
+        public String getName() {
             return this.name();
         }
     }

@@ -1,5 +1,7 @@
 package component.card;
 
+import component.Component;
+
 /**
  * A Card has a front face and a back face.
  * This face is mutable and can describe to String the current face.
@@ -8,16 +10,16 @@ package component.card;
  * @param <B> back of card
  * @author eatnuh
  */
-public class Card<F extends CardFace, B extends CardFace> {
+public class Card<F extends Component, B extends Component> implements Component {
 
     private final F front;
     private final B back;
-    private CardFace curFace;
+    private Component cur;
 
-    protected Card(F front, B back, CardFace curFace) {
+    protected Card(F front, B back, Component cur) {
         this.front = front;
         this.back = back;
-        this.curFace = curFace;
+        this.cur = cur;
     }
 
     public Card(F front, B back) {
@@ -42,31 +44,32 @@ public class Card<F extends CardFace, B extends CardFace> {
      * turn to front
      */
     public void turnFront() {
-        this.curFace = front;
+        this.cur = front;
     }
 
     /**
      * turn to back
      */
     public void turnBack() {
-        this.curFace = back;
+        this.cur = back;
     }
 
     /**
-     * @return string of current face
+     * @return string of current name
      */
-    public String getCurFace() {
-        return this.curFace.getCardFace();
+    @Override
+    public String getName() {
+        return cur.getName();
     }
 
     /**
      * @param front front of card
      * @param back  back of card
-     * @param <F>   front type
-     * @param <B>   back type
+     * @param <F>   front of card type
+     * @param <B>   back of card type
      * @return card of front state
      */
-    public static <F extends CardFace, B extends CardFace> Card<F, B> createFrontCard(F front, B back) {
+    public static <F extends Component, B extends Component> Card<F, B> createFrontCard(F front, B back) {
         return new Card<>(front, back, front);
     }
 
@@ -77,7 +80,9 @@ public class Card<F extends CardFace, B extends CardFace> {
      * @param <B>   back of card type
      * @return card of back state
      */
-    public static <F extends CardFace, B extends CardFace> Card<F, B> createBackCard(F front, B back) {
+    public static <F extends Component, B extends Component> Card<F, B> createBackCard(F front, B back) {
         return new Card<>(front, back, back);
     }
+
+
 }

@@ -1,5 +1,7 @@
 package component.card;
 
+import component.Component;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;

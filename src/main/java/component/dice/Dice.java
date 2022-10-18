@@ -1,13 +1,16 @@
 package component.dice;
 
+import component.Component;
+
 import java.util.Random;
 
 
 /**
  * A Dice is used for generating random integer
+ *
  * @author eatnuh
  */
-public class Dice {
+public class Dice implements Component {
 
     private final Random random = new Random();
 
@@ -15,12 +18,15 @@ public class Dice {
      * Maximum of random integer
      */
     private final int maximum;
+    private final String name;
 
     public Dice() {
         this(6);
     }
-    public Dice(int d) {
-        this.maximum = d;
+
+    public Dice(int maximum) {
+        this.maximum = maximum;
+        this.name = maximum + "d Dice";
     }
 
     /**
@@ -28,6 +34,11 @@ public class Dice {
      */
     public int roll() {
         return random.nextInt(maximum) + 1;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 }
 
