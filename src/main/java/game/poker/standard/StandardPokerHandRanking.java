@@ -1,12 +1,12 @@
 package game.poker.standard;
 
-import object.card.playing.PlayingCard;
+import component.card.playing.PlayingCard;
 
 import java.util.Collection;
 import java.util.function.Predicate;
 
 import static game.poker.standard.StandardPokerUtils.*;
-import static object.card.playing.PlayingCard.Rank.*;
+import static component.card.playing.PlayingCard.Rank.*;
 
 /**
  * Hand ranking used in standard poker rules

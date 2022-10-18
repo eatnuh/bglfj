@@ -1,4 +1,4 @@
-package object.card;
+package component.card;
 
 /**
  * A Card has a front face and a back face.

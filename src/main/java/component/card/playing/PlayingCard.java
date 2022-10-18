@@ -1,7 +1,7 @@
-package object.card.playing;
+package component.card.playing;
 
-import object.card.Card;
-import object.card.CardFace;
+import component.card.Card;
+import component.card.CardFace;
 
 /**
  * A playingCard inherit Card.

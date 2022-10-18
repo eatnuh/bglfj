@@ -1,6 +1,6 @@
 package game.poker.standard;
 
-import object.card.playing.PlayingCard;
+import component.card.playing.PlayingCard;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static object.card.playing.PlayingCard.Rank.*;
+import static component.card.playing.PlayingCard.Rank.*;
 
 /**
  * This class takes place when both hands have the same hand ranking in the standard poker rules.

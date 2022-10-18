@@ -1,4 +1,4 @@
-package object.card;
+package component.card;
 
 /**
  * The implementation of CardFace indicates

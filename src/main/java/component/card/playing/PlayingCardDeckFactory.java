@@ -1,6 +1,6 @@
-package object.card.playing;
+package component.card.playing;
 
-import object.card.Deck;
+import component.card.Deck;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

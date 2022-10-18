@@ -1,9 +1,9 @@
 package game.poker;
 
 import game.poker.standard.StandardPokerHandRanking;
-import object.card.Deck;
-import object.card.playing.PlayingCard;
-import object.card.playing.PlayingCardDeckFactory;
+import component.card.Deck;
+import component.card.playing.PlayingCard;
+import component.card.playing.PlayingCardDeckFactory;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -59,6 +59,7 @@ public enum PokerRule {
      * determining victory and defeat with cards
      *
      * @param cards1 - first
+     * @param cards2 - second
      * @param cards2 - second
      * @return a negative integer : first lost
      * zero : drawn
