@@ -12,13 +12,13 @@ To add a dependency using maven :
 <dependency>
     <groupId>io.github.eatnuh</groupId>
     <artifactId>bglfj</artifactId>
-    <version>1.1</version>
+    <version>1.3</version>
 </dependency>
 ```
 
 To add a dependency using gradle : 
 ```groovy
 dependencies {
-    implementation 'io.github.eatnuh:bglfj:1.1' 
+    implementation 'io.github.eatnuh:bglfj:1.3' 
 }
 ```
