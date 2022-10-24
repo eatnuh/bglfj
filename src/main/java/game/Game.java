@@ -12,8 +12,14 @@ import java.util.List;
  */
 public abstract class Game<P extends Player> implements Runnable {
 
+    /**
+     * players of game
+     */
     protected List<P> players;
 
+    /**
+     * @param players players of game
+     */
     public Game(Collection<P> players) {
         this.players = new ArrayList<>(players);
     }

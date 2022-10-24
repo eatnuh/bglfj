@@ -14,6 +14,9 @@ public class FlowerCard extends Card<FlowerCard.Front, FlowerCard.Back> {
         super(front, back, cur);
     }
 
+    /**
+     * front of flower card
+     */
     public enum Front implements Component {
 
         JANUARY_BRIGHT(Month.JANUARY, Rank.BRIGHT),

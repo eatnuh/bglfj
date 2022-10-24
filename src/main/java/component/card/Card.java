@@ -16,12 +16,21 @@ public class Card<F extends Component, B extends Component> implements Component
     private final B back;
     private Component cur;
 
+    /**
+     * @param front front of card
+     * @param back  back of card
+     * @param cur   current state of card
+     */
     protected Card(F front, B back, Component cur) {
         this.front = front;
         this.back = back;
         this.cur = cur;
     }
 
+    /**
+     * @param front front of card
+     * @param back  back of card
+     */
     public Card(F front, B back) {
         this(front, back, back);
     }
@@ -64,6 +73,7 @@ public class Card<F extends Component, B extends Component> implements Component
     public static <F extends Component, B extends Component> Card<F, B> createFrontCard(F front, B back) {
         return new Card<>(front, back, front);
     }
+
     /**
      * @param front front of card
      * @param back  back of card
@@ -75,6 +85,9 @@ public class Card<F extends Component, B extends Component> implements Component
         return new Card<>(front, back, back);
     }
 
+    /**
+     * @return card identifier
+     */
     @Override
     public String getId() {
         return cur.getId();

@@ -34,6 +34,10 @@ public class Deck<C extends Card> {
         this.cards.push(card);
     }
 
+    /**
+     * add cards
+     * @param cards cards
+     */
     public void add(C... cards) {
         this.cards.addAll(
                 Arrays.stream(cards)
@@ -41,14 +45,24 @@ public class Deck<C extends Card> {
         );
     }
 
+    /**
+     * add cards
+     * @param cards Collection of card
+     */
     public void add(Collection<C> cards) {
         this.cards.addAll(cards);
     }
 
+    /**
+     * @return deck is empty
+     */
     public boolean isEmpty() {
         return cards.isEmpty();
     }
 
+    /**
+     * @return size of deck
+     */
     public int size() {
         return cards.size();
     }
