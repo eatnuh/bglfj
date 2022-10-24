@@ -18,15 +18,16 @@ public class Dice implements Component {
      * Maximum of random integer
      */
     private final int maximum;
-    private final String name;
 
+    /**
+     * default constructor make 6d Dice
+     */
     public Dice() {
         this(6);
     }
 
     public Dice(int maximum) {
         this.maximum = maximum;
-        this.name = maximum + "d Dice";
     }
 
     /**
@@ -36,9 +37,21 @@ public class Dice implements Component {
         return random.nextInt(maximum) + 1;
     }
 
+    /**
+     * @return dice's identifier
+     */
     @Override
-    public String getName() {
-        return name;
+    public String getId() {
+        return maximum + "d Dice";
+    }
+
+    /**
+     * @param id identifier
+     * @return dice's identifier equals to {@param id}
+     */
+    @Override
+    public boolean is(String id) {
+        return id.equals(id);
     }
 }
 

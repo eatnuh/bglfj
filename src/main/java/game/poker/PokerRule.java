@@ -1,17 +1,13 @@
 package game.poker;
 
-import game.poker.standard.StandardPokerHandRanking;
 import component.card.Deck;
 import component.card.playing.PlayingCard;
 import component.card.playing.PlayingCardDeckFactory;
+import game.poker.standard.StandardPokerComparator;
 
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.function.Supplier;
-
-import static game.poker.standard.StandardPokerHandRanking.compareHandRanking;
-import static game.poker.standard.StandardPokerHandRanking.getHandRanking;
-import static game.poker.standard.StandardPokerRankTier.compareRank;
 
 /**
  * A poker rule has instances of various poker rules.
@@ -32,12 +28,7 @@ public enum PokerRule {
      * Uses 52 decks of playing cards without jokers.
      */
     STANDARD(
-            (cards1, cards2) -> {
-                StandardPokerHandRanking handRanking1 = getHandRanking(cards1);
-                StandardPokerHandRanking handRanking2 = getHandRanking(cards2);
-
-                return (handRanking1.equals(handRanking2)) ? compareRank(cards1, cards2) : compareHandRanking(handRanking1, handRanking2);
-            },
+            new StandardPokerComparator(),
             PlayingCardDeckFactory::getDeckWithoutJoker
     );
 

@@ -5,6 +5,7 @@ import component.Component;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * A Hand is the cards of the player who holds them.
@@ -20,16 +21,8 @@ public class Hand<C extends Card> {
     public Hand() {
     }
 
-    public Hand(Collection<C> cards) {
-        add(cards);
-    }
-
     public void add(C card) {
         cards.add(card);
-    }
-
-    public void add(Collection<C> cards) {
-        this.cards.addAll(cards);
     }
 
     /**
@@ -46,8 +39,8 @@ public class Hand<C extends Card> {
                 .orElseThrow(() -> new AssertionError());
     }
 
-    public C pick(int index) {
-        return this.cards.get(index);
+    public C pick(String id) {
+        return cards.stream().filter(c -> c.is(id)).findFirst().orElseThrow(() -> new AssertionError());
     }
 
     /**
@@ -62,8 +55,10 @@ public class Hand<C extends Card> {
         return pick;
     }
 
-    public C draw(int index) {
-        return cards.remove(index);
+    public C draw(String id) {
+        C pick = pick(id);
+        remove(pick);
+        return pick;
     }
 
     public boolean isEmpty() {

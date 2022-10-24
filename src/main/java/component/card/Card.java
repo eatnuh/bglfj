@@ -55,14 +55,6 @@ public class Card<F extends Component, B extends Component> implements Component
     }
 
     /**
-     * @return string of current name
-     */
-    @Override
-    public String getName() {
-        return cur.getName();
-    }
-
-    /**
      * @param front front of card
      * @param back  back of card
      * @param <F>   front of card type
@@ -72,7 +64,6 @@ public class Card<F extends Component, B extends Component> implements Component
     public static <F extends Component, B extends Component> Card<F, B> createFrontCard(F front, B back) {
         return new Card<>(front, back, front);
     }
-
     /**
      * @param front front of card
      * @param back  back of card
@@ -84,5 +75,8 @@ public class Card<F extends Component, B extends Component> implements Component
         return new Card<>(front, back, back);
     }
 
-
+    @Override
+    public String getId() {
+        return cur.getId();
+    }
 }

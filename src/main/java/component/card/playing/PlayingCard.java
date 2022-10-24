@@ -9,9 +9,9 @@ import component.card.Card;
  * and rank(ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING)
  * The back of a PlayingCard HIDDEN
  */
-public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back> {
+public class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back> {
 
-    private PlayingCard(Front front, Back back, Component init) {
+    protected PlayingCard(Front front, Back back, Component init) {
         super(front, back, init);
     }
 
@@ -92,7 +92,7 @@ public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back>
         }
 
         @Override
-        public String getName() {
+        public String getId() {
             return this.name();
         }
 
@@ -102,7 +102,7 @@ public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back>
         HIDDEN;
 
         @Override
-        public String getName() {
+        public String getId() {
             return this.name();
         }
     }
@@ -113,6 +113,14 @@ public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back>
 
     public enum Rank {
         ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, JOKER
+    }
+
+    public Suit getSuit() {
+        return getFront().getSuit();
+    }
+
+    public Rank getRank() {
+        return getFront().getRank();
     }
 
     public boolean is(Front front) {
@@ -135,12 +143,9 @@ public final class PlayingCard extends Card<PlayingCard.Front, PlayingCard.Back>
         return this.is(other.getRank());
     }
 
-    public Suit getSuit() {
-        return getFront().getSuit();
-    }
-
-    public Rank getRank() {
-        return getFront().getRank();
+    @Override
+    public boolean is(String id) {
+        return getFront().is(id);
     }
 
     public static PlayingCard createBackCard(Front front) {
