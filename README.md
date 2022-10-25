@@ -1,7 +1,6 @@
 # Board Game Library For Java
-
-bglfj is a Java library for the components (cards, dice, pieces, boards, etc.) 
-used in the board game and the rules of the game.
+bglfj is a Java library for the components (cards, dice, pieces, boards, etc.) used in the board game, 
+player of game and the game.
 
 * requires JDK 1.8 or higher.
 
